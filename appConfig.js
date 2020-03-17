@@ -5,7 +5,7 @@ module.exports = {
   subTitle:
     'Community based distance learning while you are social distancing.',
   formLink:
-    'https://docs.google.com/forms/d/e/1FAIpQLScEoGDqtElfP_RjJIC9kO8nd_5EFv-hUkmCCQzn3R4E-NgWGg',
+    'https://docs.google.com/forms/d/1fohXFO7aP3m8yyXPpm3a231_q_l2LZy07WFDOX44AWs',
   maxAmountEvents: 2,
   limitMonthInTheFuture: 3,
   theme,
