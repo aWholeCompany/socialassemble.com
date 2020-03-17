@@ -17,10 +17,10 @@ const SPREADSHEET_QUERY = graphql`
       edges {
         node {
           id
-          eventName: whatisthename
-          date: when
+          eventName: whatisthenameofyourevent
+          date: whatisthedateofyourevent
           eventLink: linktotheevent
-          place: where
+          place: whereareyoulocated
         }
       }
     }

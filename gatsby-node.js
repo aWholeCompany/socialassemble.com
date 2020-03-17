@@ -7,10 +7,10 @@ exports.createSchemaCustomization = ({ actions }) => {
       children: [Node!]!
       internal: Internal!
       timestamp: String
-      whatisthename: String
-      when: String
+      whatisthenameofyourevent: String
+      whatisthedateofyourevent: String
       linktotheevent: String
-      where: String
+      whereareyoulocated: String
     }
   `
   createTypes(typeDefs)
