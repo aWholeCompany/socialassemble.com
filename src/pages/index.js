@@ -6,6 +6,7 @@ import GithubCorner from 'react-github-corner'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
 import Hero from '../components/Hero'
+import Faq from '../components/Faq'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
@@ -66,6 +67,8 @@ class CalendarPage extends PureComponent {
     return (
       <Layout>
         <Hero />
+
+        <Faq />
         <Box id="calendars" animation="fadeIn">
           <ConfigContext.Consumer>
             {({ limitMonthInTheFuture }) => (

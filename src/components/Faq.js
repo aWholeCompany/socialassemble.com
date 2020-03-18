@@ -1,6 +1,7 @@
 import React from 'react'
-import { Heading } from 'grommet'
+import { Box, Heading, ResponsiveContext, Text } from 'grommet'
 import { useStaticQuery, graphql } from 'gatsby'
+import ConfigContext from './ConfigContext'
 
 function Faq() {
   const { allFaqYaml } = useStaticQuery(graphql`
@@ -15,17 +16,26 @@ function Faq() {
       }
     }
   `)
+
   return (
-    <div id="faq">
-      {allFaqYaml.edges.map(({ node }) => {
-        return (
-          <div className="faq-item">
-            <Heading size="medium">{node.title}</Heading>
-            <p>{node.answer}</p>
-          </div>
-        )
-      })}
-    </div>
+    <ConfigContext.Consumer>
+      {() => (
+        <ResponsiveContext.Consumer>
+          {() => (
+            <Box pad="xlarge">
+              {allFaqYaml.edges.map(({ node }) => {
+                return (
+                  <Box>
+                    <Heading size="small">{node.title}</Heading>
+                    <Text>{node.answer}</Text>
+                  </Box>
+                )
+              })}
+            </Box>
+          )}
+        </ResponsiveContext.Consumer>
+      )}
+    </ConfigContext.Consumer>
   )
 }
 

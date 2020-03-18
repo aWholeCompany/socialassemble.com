@@ -5,7 +5,6 @@ import { Box, Heading, Button, Image, ResponsiveContext } from 'grommet'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import ConfigContext from './ConfigContext'
-import Faq from './Faq'
 
 const HeroButton = styled(Button)`
   padding: 20px;
@@ -22,7 +21,7 @@ const Hero = () => (
             flex="grow"
             height="100vh"
             justify="center"
-            pad="medium"
+            pad="xlarge"
             animation="slideDown"
           >
             <StaticQuery
@@ -58,8 +57,6 @@ const Hero = () => (
                 {appConfig.subTitle}
               </Heading>
             )}
-
-            <Faq />
 
             <Box
               direction={size === 'small' ? 'column' : 'row'}
