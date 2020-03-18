@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react'
-import { Box, Text, Anchor } from 'grommet'
+import { Box } from 'grommet'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
-import GithubCorner from 'react-github-corner'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
 import Hero from '../components/Hero'
+import Faq from '../components/Faq'
 import Layout from '../components/PageLayout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
@@ -26,13 +25,6 @@ const SPREADSHEET_QUERY = graphql`
     }
   }
 `
-
-const StyledGithubCorner = styled(GithubCorner).attrs(props => {
-  return {
-    octoColor: props.theme.global.colors.text,
-    bannerColor: props.theme.global.colors.brand,
-  }
-})``
 
 const INITIAL_STATE = {
   currentDay: new Date(),
@@ -66,6 +58,8 @@ class CalendarPage extends PureComponent {
     return (
       <Layout>
         <Hero />
+
+        <Faq />
         <Box id="calendars" animation="fadeIn">
           <ConfigContext.Consumer>
             {({ limitMonthInTheFuture }) => (
@@ -81,16 +75,6 @@ class CalendarPage extends PureComponent {
             )}
           </ConfigContext.Consumer>
         </Box>
-
-        <Text margin="medium">
-          This site is powered by &nbsp;
-          <Anchor href="https://www.netlify.com/">
-            <b>Netlify</b>
-          </Anchor>
-          &nbsp; ❤
-        </Text>
-
-        <StyledGithubCorner href="https://github.com/EmaSuriano/gatsby-starter-event-calendar" />
 
         {showModal && (
           <ModalEvent

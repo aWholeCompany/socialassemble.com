@@ -21,7 +21,7 @@ const Hero = () => (
             flex="grow"
             height="100vh"
             justify="center"
-            pad="medium"
+            pad="xlarge"
             animation="slideDown"
           >
             <StaticQuery
@@ -57,22 +57,6 @@ const Hero = () => (
                 {appConfig.subTitle}
               </Heading>
             )}
-
-            <div>
-              <h2>What is Social Assemble?</h2>
-              <p>Social Assemble is a way for YOU to make money and/or help your friends make money during the Covid-19 shutdowns.</p>
-
-              <h3>How:</h3>
-              <p>Are you a Yoga Instructor?  Meditation Leader?  Possibly you know about cooking or gardening, maybe you enjoy being a Dungeon Master?  Whatever it is you do, we provide a way for you to do it, and get paid!</p>
-
-              <p>We do this using our own Slack Team!</p>
-
-              <h4>How can I teach?</h4>
-              <p>To teach a class, first join our [Slack Team].  Then add the class you want to teach to our calendar below.  Then when the time arrives for the class, you need to get on Slack, and teach that class!</p>
-
-              <h4>How can I join a class?</h4>
-              <p>To join a class, first join our [Slack Team].  Then find a class you want to join on the calendar below.  Pay the instructor the amount they request, and they should invite you to the class before it starts.</p>
-            </div>
 
             <Box
               direction={size === 'small' ? 'column' : 'row'}
