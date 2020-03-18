@@ -33,7 +33,9 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
-    "prettier": "^1.19.1"
+    "husky": "^4.2.3",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1"
   },
   "keywords": [
     "gatsby",
@@ -44,8 +46,14 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby clean && gatsby develop",
+    "format": "prettier --write 'src/**/*'",
     "start": "npm run develop",
     "lint": "eslint src"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "./node_modules/pretty-quick/bin/pretty-quick.js --staged"
+    }
+  }
 }

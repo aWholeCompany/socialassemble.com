@@ -33,7 +33,7 @@ const Day = ({ day, events, onClick }) => {
         background={`calendar-${dayType}-background`}
         border={{ color: `calendar-${dayType}-border` }}
         pad="xsmall"
-        {...events.length && { onClick }}
+        {...(events.length && { onClick })}
         square
       >
         <Box direction="column" fill="vertical">
@@ -66,7 +66,7 @@ const Day = ({ day, events, onClick }) => {
           background={`calendar-${dayType}-background`}
           border={{ color: `calendar-${dayType}-border` }}
           pad="small"
-          {...events.length && { onClick }}
+          {...(events.length && { onClick })}
           square
         >
           <Box direction="row" fill="vertical">
