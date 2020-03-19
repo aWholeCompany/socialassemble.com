@@ -50,13 +50,13 @@ module.exports = {
         credentials: buildCredentials(process.env),
       },
     },
-    `gatsby-transformer-yaml`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./content/`,
-      },
-    },
+    // `gatsby-transformer-yaml`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `./content/`,
+    //   },
+    // },
     'gatsby-plugin-offline',
   ],
 }
