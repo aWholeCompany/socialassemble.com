@@ -4,6 +4,7 @@ import { css, createGlobalStyle } from 'styled-components'
 import { Grommet } from 'grommet'
 import { grommet } from 'grommet/themes'
 import Helmet from './Helmet'
+import Header from '../components/Header'
 import ConfigContext from './ConfigContext'
 import flatObject from '../utils/flatObject'
 
@@ -43,6 +44,7 @@ const Layout = ({ children }) => (
           `}
         >
           <Helmet />
+          <Header />
           {children}
         </Grommet>
       )}

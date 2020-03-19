@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Heading, Button, Text } from 'grommet'
-import Layout from '../components/PageLayout'
+import Layout from '../components/Layout'
 
 const NotFoundPage = () => (
   <Layout>

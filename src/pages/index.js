@@ -4,11 +4,9 @@ import { StaticQuery, graphql } from 'gatsby'
 import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
 import Hero from '../components/Hero'
-import UserInstructionLinks from '../components/UserInstructionLinks'
-import Layout from '../components/PageLayout'
+import Layout from '../components/Layout'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
-
 
 // override this query with your own questions!
 const SPREADSHEET_QUERY = graphql`
@@ -59,7 +57,6 @@ class CalendarPage extends PureComponent {
     return (
       <Layout>
         <Hero />
-        <UserInstructionLinks />
         <Box id="calendars" animation="fadeIn">
           <ConfigContext.Consumer>
             {({ limitMonthInTheFuture }) => (
