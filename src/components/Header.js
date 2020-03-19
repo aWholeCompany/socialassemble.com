@@ -27,14 +27,16 @@ const menuItems = [
 
 export default function() {
   return (
-    <Header size="large" pad="medium" a11yTitle="SocialAssmble">
-      <Box>
+    <Header size="large" pad="small" a11yTitle="SocialAssmble" fixed="true">
+      <Box direction="row">
         <BrandAnchor hoverIndicator href="/">
-          <Calendar alignSelf="start" pad="small" />
-          <Text textAlign="center" margin="xsmall">
-            SocialAssemble
-          </Text>
+          <Calendar />
         </BrandAnchor>
+        <Box>
+          <BrandAnchor href="/">
+            <Text margin="xsmall">Social Assemble</Text>
+          </BrandAnchor>
+        </Box>
       </Box>
       <Menu
         dropProps={{

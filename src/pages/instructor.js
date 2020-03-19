@@ -1,8 +1,6 @@
 import React from 'react'
 import { Anchor, Box, Heading, Paragraph } from 'grommet'
 import Layout from '../components/Layout'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 const InstructorPage = () => (
   <Layout>
@@ -68,7 +66,6 @@ const InstructorPage = () => (
         </Paragraph>
       </Box>
     </Box>
-    <Footer />
   </Layout>
 )
 

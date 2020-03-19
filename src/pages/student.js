@@ -1,7 +1,6 @@
 import React from 'react'
 import { Anchor, Box, Heading, Paragraph } from 'grommet'
 import Layout from '../components/Layout'
-import Footer from '../components/Footer'
 
 const StudentPage = () => (
   <Layout>
@@ -23,7 +22,6 @@ const StudentPage = () => (
         to the class before it starts.
       </Paragraph>
     </Box>
-    <Footer />
   </Layout>
 )
 

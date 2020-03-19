@@ -1,7 +1,7 @@
 const theme = require('./themes/main.json')
 
 module.exports = {
-  title: 'SocialAssemble',
+  title: 'Social Assemble',
   subTitle:
     'Community based distance learning while you are social distancing.',
   formLink:
