@@ -13,15 +13,15 @@ const BrandAnchor = styled(Anchor)`
 const menuItems = [
   {
     label: `Become an Instructor`,
-    href: `instructor`,
+    href: `/instructor`,
   },
   {
     label: `Take a Class`,
-    href: `student`,
+    href: `/student`,
   },
   {
     label: `FAQ`,
-    href: `faq`,
+    href: `/faq`,
   },
 ]
 
