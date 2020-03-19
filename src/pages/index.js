@@ -5,6 +5,7 @@ import Calendar from '../components/Calendar'
 import ModalEvent from '../components/ModalEvent'
 import Hero from '../components/Hero'
 import Layout from '../components/Layout'
+import Footer from '../components/Footer'
 import groupEventsByMonth from '../utils/groupEventsByMonth'
 import ConfigContext from '../components/ConfigContext'
 
@@ -80,6 +81,8 @@ class CalendarPage extends PureComponent {
             events={eventsOfTheDay}
           />
         )}
+
+        <Footer />
       </Layout>
     )
   }
