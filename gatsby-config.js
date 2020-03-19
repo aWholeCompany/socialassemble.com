@@ -16,7 +16,7 @@ const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'SocialAssemble - Assemble for Socially Distant Learning',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -50,13 +50,13 @@ module.exports = {
         credentials: buildCredentials(process.env),
       },
     },
-    `gatsby-transformer-yaml`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./content/`,
-      },
-    },
+    // `gatsby-transformer-yaml`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `./content/`,
+    //   },
+    // },
     'gatsby-plugin-offline',
   ],
 }
