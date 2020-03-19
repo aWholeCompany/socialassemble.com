@@ -5,6 +5,13 @@
   "focus": "#1fe5bd",
   "text": "white",
 
+  "menu": {
+    "background": "#5e227f",
+    "extend": {
+      "text": "black"
+    }
+  },
+
   "calendar": {
     "today": {
       "background": "#9af1daDD",

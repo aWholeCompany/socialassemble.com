@@ -1,18 +1,28 @@
 import React from 'react'
-import Layout from '../components/PageLayout'
-import Header from '../components/Header'
+import { Anchor, Box, Heading, Paragraph } from 'grommet'
+import Layout from '../components/Layout'
 
-  const StudentPage = () => (
-    <Layout>
-      <Header />
-      <div className="layout-container">
-        <h1>Becoming An Student</h1>
+const StudentPage = () => (
+  <Layout>
+    <Box pad="medium">
+      <Heading size="medium">Becoming An Student</Heading>
 
-        <p>To join a class, first join our <a href="https://join.slack.com/t/socialassemble/shared_invite/zt-cvlxg4ie-yFt57NL00u4SqUtuAmp5dg">Slack Team Here</a>.</p>
-        <p>Then find a class you want to join on the calendar below.</p>
-        <p>Pay the instructor the amount they request, and they should invite you to the class before it starts.</p>
-      </div>
-    </Layout>
-  )
+      <Paragraph>
+        To join a class, first join our{' '}
+        <Anchor href="https://join.slack.com/t/socialassemble/shared_invite/zt-cvlxg4ie-yFt57NL00u4SqUtuAmp5dg">
+          Slack Team Here
+        </Anchor>
+        .
+      </Paragraph>
+      <Paragraph>
+        Then find a class you want to join on the calendar below.
+      </Paragraph>
+      <Paragraph>
+        Pay the instructor the amount they request, and they should invite you
+        to the class before it starts.
+      </Paragraph>
+    </Box>
+  </Layout>
+)
 
 export default StudentPage
