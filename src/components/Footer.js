@@ -12,7 +12,7 @@ export default function() {
         <Anchor href="https://github.com/aWholeCompany/socialassemble.com">GitHub</Anchor>
       </Text>
       <Text textAlign="center" margin="xsmall">
-        Also please check out our other frieds site for helping service industry workers!{' '}
+        Also please check out our other friends site for helping service industry workers!{' '}
         <Anchor href="https://avl.tips">avl.tips</Anchor>
       </Text>
     </Box>
