@@ -1,5 +1,14 @@
 import React from 'react'
-import { Button, Header, Menu } from 'grommet'
+import { Anchor, Box, Header, Menu, Text } from 'grommet'
+import { Calendar } from 'grommet-icons'
+import styled from 'styled-components'
+
+const BrandAnchor = styled(Anchor)`
+  &:hover {
+    text-decoration: none;
+    filter: brightness(85%);
+  }
+`
 
 const menuItems = [
   {
@@ -18,10 +27,15 @@ const menuItems = [
 
 export default function() {
   return (
-    <Header size="large" align="center" pad="small" a11yTitle="SocialAssmble">
-      <Button hoverIndicator href="/">
-        SocialAssemble
-      </Button>
+    <Header size="large" pad="medium" a11yTitle="SocialAssmble">
+      <Box>
+        <BrandAnchor hoverIndicator href="/">
+          <Calendar alignSelf="start" pad="small" />
+          <Text textAlign="center" margin="xsmall">
+            SocialAssemble
+          </Text>
+        </BrandAnchor>
+      </Box>
       <Menu
         dropProps={{
           align: { top: 'bottom', left: 'left' },
