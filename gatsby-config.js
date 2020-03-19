@@ -16,7 +16,7 @@ const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({
 
 module.exports = {
   siteMetadata: {
-    title: 'SocialAssemble - Assemble for Socially Distant Learning',
+    title: 'Social Assemble - Assemble for Socially Distant Learning',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

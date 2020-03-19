@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Heading, Anchor, Text } from 'grommet'
 import Layout from '../components/Layout'
-import Footer from '../components/Footer'
 
 const FaqPage = () => (
   <Layout>
@@ -47,7 +46,6 @@ const FaqPage = () => (
         </Text>
       </Box>
     </Box>
-    <Footer />
   </Layout>
 )
 
