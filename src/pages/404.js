@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Heading, Button, Text } from 'grommet'
 import Layout from '../components/Layout'
+import { LANDING } from '../constants/routes'
 
 const NotFoundPage = () => (
   <Layout>
@@ -23,7 +24,7 @@ const NotFoundPage = () => (
       <Button
         primary
         margin={{ top: 'large' }}
-        href="/"
+        href={LANDING}
         label={<Text margin="small">Go back to HomePage</Text>}
       />
     </Box>

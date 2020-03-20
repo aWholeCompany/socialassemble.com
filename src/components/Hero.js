@@ -5,6 +5,7 @@ import { Box, Heading, Button, Image, ResponsiveContext } from 'grommet'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import ConfigContext from './ConfigContext'
+import { CALENDAR } from '../constants/routes'
 
 const HeroButton = styled(Button)`
   padding: 20px;
@@ -64,9 +65,9 @@ const Hero = () => (
               gap="medium"
             >
               <HeroButton
-                href="#calendars"
-                label="See all the events"
-                a11yTitle="See all the events"
+                href={CALENDAR}
+                label="Upcoming events"
+                a11yTitle="Upcoming events"
                 primary
               />
               <HeroButton

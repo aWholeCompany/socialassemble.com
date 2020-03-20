@@ -2,6 +2,13 @@ import React from 'react'
 import { Anchor, Box, Header, Menu, Text } from 'grommet'
 import { Calendar } from 'grommet-icons'
 import styled from 'styled-components'
+import {
+  LANDING,
+  CALENDAR,
+  INSTRUCTOR,
+  STUDENT,
+  FAQ,
+} from '../constants/routes'
 
 const BrandAnchor = styled(Anchor)`
   &:hover {
@@ -12,16 +19,20 @@ const BrandAnchor = styled(Anchor)`
 
 const menuItems = [
   {
+    label: `Calendar`,
+    href: CALENDAR,
+  },
+  {
     label: `Become an Instructor`,
-    href: `/instructor`,
+    href: INSTRUCTOR,
   },
   {
     label: `Take a Class`,
-    href: `/student`,
+    href: STUDENT,
   },
   {
     label: `FAQ`,
-    href: `/faq`,
+    href: FAQ,
   },
 ]
 
@@ -29,11 +40,11 @@ export default function() {
   return (
     <Header size="large" pad="small" a11yTitle="SocialAssmble" fixed="true">
       <Box direction="row">
-        <BrandAnchor hoverIndicator href="/">
+        <BrandAnchor hoverIndicator href={LANDING}>
           <Calendar />
         </BrandAnchor>
         <Box>
-          <BrandAnchor href="/">
+          <BrandAnchor href={LANDING}>
             <Text margin="xsmall">Social Assemble</Text>
           </BrandAnchor>
         </Box>
