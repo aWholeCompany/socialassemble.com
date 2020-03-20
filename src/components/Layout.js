@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import { css, createGlobalStyle } from 'styled-components'
-import { Grommet } from 'grommet'
+import { Box, Grommet } from 'grommet'
 import { grommet } from 'grommet/themes'
 import BackgroundImage from 'gatsby-background-image'
 import Helmet from './Helmet'
@@ -69,9 +69,11 @@ const Layout = ({ children }) => (
                     imageData,
                   ]}
                 >
-                  <Header />
-                  {children}
-                  <Footer />
+                  <Box flex="grow" height="100vh">
+                    <Header />
+                    {children}
+                    <Footer />
+                  </Box>
                 </BackgroundImage>
               )
             }}

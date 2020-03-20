@@ -19,8 +19,8 @@ const Hero = () => (
           <Box
             a11yTitle="Calendar events title"
             align="center"
-            flex="grow"
-            height="100vh"
+            // flex="grow"
+            height="85vh"
             justify="center"
             pad="xlarge"
             animation="slideDown"
