@@ -7,10 +7,6 @@ import styled from 'styled-components'
 import ConfigContext from './ConfigContext'
 import { CALENDAR } from '../constants/routes'
 
-const HeroBox = styled(Box)`
-  min-height: 89.4vh;
-`
-
 const HeroButton = styled(Button)`
   padding: 15px;
 `
@@ -20,7 +16,7 @@ const Hero = () => (
     {appConfig => (
       <ResponsiveContext.Consumer>
         {size => (
-          <HeroBox
+          <Box
             a11yTitle="Calendar events title"
             align="center"
             justify="center"
@@ -79,7 +75,7 @@ const Hero = () => (
                 target="_blank"
               />
             </Box>
-          </HeroBox>
+          </Box>
         )}
       </ResponsiveContext.Consumer>
     )}

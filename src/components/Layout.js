@@ -22,6 +22,10 @@ const MainBox = styled(Box)`
   min-heignt: 100vh;
 `
 
+const ContentBox = styled(Box)`
+  min-height: 89.4vh;
+`
+
 const enhancedTheme = (baseTheme, customTheme) => {
   const flatTheme = flatObject(customTheme)
   const colors = {
@@ -76,7 +80,7 @@ const Layout = ({ children }) => (
                 >
                   <MainBox>
                     <Header />
-                    {children}
+                    <ContentBox>{children}</ContentBox>
                     <Footer />
                   </MainBox>
                 </BackgroundImage>
