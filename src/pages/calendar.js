@@ -1,83 +1,23 @@
 import React, { PureComponent } from 'react'
-import { Box } from 'grommet'
-import { StaticQuery, graphql } from 'gatsby'
-import Calendar from '../components/Calendar'
-import ModalEvent from '../components/ModalEvent'
 import Layout from '../components/Layout'
-import groupEventsByMonth from '../utils/groupEventsByMonth'
-import ConfigContext from '../components/ConfigContext'
 
-// override this query with your own questions!
-const SPREADSHEET_QUERY = graphql`
-  query eventsQuery {
-    allGoogleSheetEventsRow {
-      edges {
-        node {
-          id
-          eventName: whatisthenameofyourevent
-          date: whatisthedateofyourevent
-          eventLink: linktotheevent
-          place: whereareyoulocated
-        }
-      }
-    }
-  }
-`
-
-const INITIAL_STATE = {
-  currentDay: new Date(),
-  eventsOfTheDay: [],
-  showModal: false,
-}
+const gcal = `<iframe 
+src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=ajVzNDFvYzY0Z2E4c3Z0bWc0bWM3YjZwczhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTitle=1&amp;showNav=1"
+style="border:solid 1px #777"
+width="800"
+height="600"
+frameBorder="0"
+scrolling="no"
+title="cal">
+</iframe>`;
 
 class CalendarPage extends PureComponent {
-  constructor(props) {
-    super(props)
-    this.state = INITIAL_STATE
-    this.hideModal = this.hideModal.bind(this)
-    this.showModal = this.showModal.bind(this)
-  }
-
-  hideModal() {
-    this.setState(INITIAL_STATE)
-  }
-
-  showModal(eventsOfTheDay, currentDay) {
-    this.setState({
-      currentDay,
-      eventsOfTheDay,
-      showModal: true,
-    })
-  }
-
   render() {
-    const { currentDay, eventsOfTheDay, showModal } = this.state
-
     return (
       <Layout>
-        <Box id="calendars" animation="fadeIn">
-          <ConfigContext.Consumer>
-            {({ limitMonthInTheFuture }) => (
-              <StaticQuery
-                query={SPREADSHEET_QUERY}
-                render={data => (
-                  <Calendar
-                    showModal={this.showModal}
-                    events={groupEventsByMonth(data, limitMonthInTheFuture)}
-                  />
-                )}
-              />
-            )}
-          </ConfigContext.Consumer>
-        </Box>
-
-        {showModal && (
-          <ModalEvent
-            hideModal={this.hideModal}
-            currentDay={currentDay}
-            events={eventsOfTheDay}
-          />
-        )}
+        <box align="center" justify="center">
+          <div dangerouslySetInnerHTML={{ __html: gcal }} />
+        </box>
       </Layout>
     )
   }
