@@ -1,4 +1,8 @@
-This site is based off of https://github.com/EmaSuriano/gatsby-starter-event-calendar
+This site is based off of Google Calendar
+
+You will need to change the ifame embed in calendar.js as per: https://support.google.com/calendar/answer/41207?hl=en
+
+You will need a Google Sheet setup with the "Calendar Create Events" add-on
 
 ## Local Development Environment
 
