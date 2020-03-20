@@ -7,8 +7,12 @@ import styled from 'styled-components'
 import ConfigContext from './ConfigContext'
 import { CALENDAR } from '../constants/routes'
 
+const HeroBox = styled(Box)`
+  min-height: 89.4vh;
+`
+
 const HeroButton = styled(Button)`
-  padding: 20px;
+  padding: 15px;
 `
 
 const Hero = () => (
@@ -16,53 +20,50 @@ const Hero = () => (
     {appConfig => (
       <ResponsiveContext.Consumer>
         {size => (
-          <Box
+          <HeroBox
             a11yTitle="Calendar events title"
             align="center"
-            // flex="grow"
-            height="85vh"
             justify="center"
             pad="xlarge"
             animation="slideDown"
           >
-            <StaticQuery
-              query={graphql`
-                {
-                  imageSharp {
-                    original {
-                      src
+            <Box align="center" flex={true}>
+              <StaticQuery
+                query={graphql`
+                  {
+                    imageSharp {
+                      original {
+                        src
+                      }
                     }
                   }
-                }
-              `}
-              render={data => {
-                const { src } = data.imageSharp.original
-                return (
-                  <Box
-                    width={size === 'small' ? 'xsmall' : 'small'}
-                    height={size === 'small' ? 'xsmall' : 'small'}
-                    margin={{ bottom: 'medium' }}
-                  >
-                    <Image fit="contain" src={src} a11yTitle="logo" />
-                  </Box>
-                )
-              }}
-            />
-
-            <Heading size="large" align="center" a11yTitle="Application title">
-              {appConfig.title}
-            </Heading>
-
-            {appConfig.subTitle && (
-              <Heading align="center" a11yTitle="Application sub title">
+                `}
+                render={data => {
+                  const { src } = data.imageSharp.original
+                  return (
+                    <Box
+                      width={size === 'small' ? 'xsmall' : 'small'}
+                      height={size === 'small' ? 'xsmall' : 'small'}
+                      margin={{ bottom: 'medium' }}
+                    >
+                      <Image fit="contain" src={src} a11yTitle="logo" />
+                    </Box>
+                  )
+                }}
+              />
+              <Heading size="large" a11yTitle="Application title">
+                {appConfig.title}
+              </Heading>
+              <Heading a11yTitle="Application sub title">
                 {appConfig.subTitle}
               </Heading>
-            )}
-
+            </Box>
             <Box
               direction={size === 'small' ? 'column' : 'row'}
               margin={{ top: 'large' }}
               gap="medium"
+              // flex={true}
+              // fill="vertical"
             >
               <HeroButton
                 href={CALENDAR}
@@ -78,7 +79,7 @@ const Hero = () => (
                 target="_blank"
               />
             </Box>
-          </Box>
+          </HeroBox>
         )}
       </ResponsiveContext.Consumer>
     )}

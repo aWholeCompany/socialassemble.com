@@ -12,7 +12,7 @@ const IconAnchor = styled(Anchor)`
 
 export default function() {
   return (
-    <Footer size="large" pad="medium" a11yTitle="SocialAssmble">
+    <Footer pad="small" a11yTitle="SocialAssmble">
       <Box margin="xsmall">&copy; 2020 A Whole Company</Box>
       <Box alignmargin="xsmall">
         <Box direction="row" align="center" alignContent="center">

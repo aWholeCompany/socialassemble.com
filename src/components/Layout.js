@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import { css, createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import { Box, Grommet } from 'grommet'
 import { grommet } from 'grommet/themes'
 import BackgroundImage from 'gatsby-background-image'
@@ -15,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
   }
+`
+
+const MainBox = styled(Box)`
+  min-heignt: 100vh;
 `
 
 const enhancedTheme = (baseTheme, customTheme) => {
@@ -69,11 +74,11 @@ const Layout = ({ children }) => (
                     imageData,
                   ]}
                 >
-                  <Box flex="grow" height="100vh">
+                  <MainBox>
                     <Header />
                     {children}
                     <Footer />
-                  </Box>
+                  </MainBox>
                 </BackgroundImage>
               )
             }}
