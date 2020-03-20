@@ -1,19 +1,6 @@
 const appConfig = require('./appConfig')
 require('dotenv').config()
 
-const buildCredentials = ({ PROJECT_ID, PRIVATE_KEY, PRIVATE_KEY_ID }) => ({
-  type: 'service_account',
-  project_id: PROJECT_ID,
-  private_key_id: PRIVATE_KEY_ID,
-  private_key: PRIVATE_KEY.replace(/(\\r)|(\\n)/g, '\n'),
-  client_email: `sagatsby@socialassemble.iam.gserviceaccount.com`,
-  client_id: '',
-  auth_uri: 'https://accounts.google.com/o/oauth2/auth',
-  token_uri: 'https://oauth2.googleapis.com/token',
-  auth_provider_x509_cert_url: 'https://www.googleapis.com/oauth2/v1/certs',
-  client_x509_cert_url: `https://www.googleapis.com/robot/v1/metadata/x509/sagatsby%40socialassemble.iam.gserviceaccount.com`,
-})
-
 module.exports = {
   siteMetadata: {
     title: 'Social Assemble - Assemble for Socially Distant Learning',
@@ -40,14 +27,6 @@ module.exports = {
         theme_color: appConfig.theme.brand,
         display: 'minimal-ui',
         icon: 'media/icon.svg',
-      },
-    },
-    {
-      resolve: 'gatsby-source-google-sheets',
-      options: {
-        spreadsheetId: '1iQVnLurvmVkDKj2sbhAJfA0G-wILy_szB0aVhxD1giw',
-        worksheetTitle: 'Events',
-        credentials: buildCredentials(process.env),
       },
     },
     // `gatsby-transformer-yaml`,
