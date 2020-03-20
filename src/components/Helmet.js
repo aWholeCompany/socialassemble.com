@@ -17,8 +17,8 @@ const Helmet = () => (
       <ReactHelmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'description', content: 'A way to assemble online for distance learning, while we sical distance' },
+          { name: 'keywords', content: 'Learning, Online, Coronavirus, Covid-19, Community, Schedule' },
         ]}
       >
         <html lang="en" />
