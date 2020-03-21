@@ -8,18 +8,16 @@ const StudentPage = () => (
       <Heading size="medium">Becoming An Student</Heading>
 
       <Paragraph>
-        To join a class, first join our{' '}
-        <Anchor href="https://join.slack.com/t/socialassemble/shared_invite/zt-cvlxg4ie-yFt57NL00u4SqUtuAmp5dg">
-          Slack Team Here
-        </Anchor>
-        .
+        First: find a class on our {' '}
+        <Anchor href="https://socialassemble.com/calendar/">calendar</Anchor>
       </Paragraph>
+
       <Paragraph>
-        Then find a class you want to join on the calendar below.
+        Next: Pay the host of the event the amount they ask using one of the payment methods they list in the description.
       </Paragraph>
+
       <Paragraph>
-        Pay the instructor the amount they request, and they should invite you
-        to the class before it starts.
+        Finally: Join the event at the appropriate time.  The event will probably be hosted on <Anchor href="https://www.zoom.us/">Zoom so we recomend you set that up first.</Anchor>
       </Paragraph>
     </Box>
   </Layout>
