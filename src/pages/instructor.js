@@ -5,29 +5,38 @@ import Layout from '../components/Layout'
 const InstructorPage = () => (
   <Layout>
     <Box pad="medium">
-      <Heading size="medium">Becoming An Instructor</Heading>
+      <Heading size="medium">Become an Instructor </Heading>
 
       <Box pad="small">
+        
+        <Paragraph>
+          With so many out of work in the Asheville area and elsewhere due to the ongoing COVID-19 situation, 
+          we wanted to facilitate an opportunity for members of the community to create and broadcast virtual 
+          classes to help make up for lost income. Social Assemble is a distance-learning hub that brings 
+          instructors and prospective students together, no matter what the subject may be. From yoga to auto mechanics, 
+          if you have skills or knowledge that can be shared remotely, this is the place to do it.  
+        </Paragraph>
+
         <Heading size="small">Requirements</Heading>
+
         <Paragraph>
-          To teach a class you will need a computer or phone with a camera that
-          you can use for doing video chat
+          In order to become an instructor, you’ll first need a computer or phone with a camera capable of recording 
+          video. The next step is finding a platform to broadcast your class, and for ease of use, we recommend{' '}
+          <Anchor href="https://zoom.us/">Zoom</Anchor>
+          .
         </Paragraph>
+
         <Paragraph>
-          Next you will need to find a way to broadcast your class.  We recomend {' '}
-          <Anchor href="https://www.zoom.us/">Zoom</Anchor>
+          After you’ve signed up on Zoom or another platform of your choice, the rest is easy: 
         </Paragraph>
-        <Paragraph>
-          Then create an event on your chosen tool (Zoom) so that you can get a link to it for the 
-          approprite time and date.  
-        </Paragraph>
-        <Paragraph>
-          Once you have that worked out, add your event to our  {' '}
-          <Anchor href="https://docs.google.com/forms/d/1fohXFO7aP3m8yyXPpm3a231_q_l2LZy07WFDOX44AWs/edit">calendar here.</Anchor>
-        </Paragraph>
-        <Paragraph>
-          And when the time comes host your event!
-        </Paragraph>
+
+        <ul>
+          <li>Create an event on Zoom for the date and time that you plan to teach your class</li>
+          <li>Copy the invitation link for your event</li>
+          <li>Add your event to our calendar, including the invitation link and your preferred method of payment in the description</li>
+          <li>When the time comes, host your event!</li>
+        </ul>
+
       </Box>
     </Box>
   </Layout>
