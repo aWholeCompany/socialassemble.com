@@ -24,7 +24,7 @@ const StudentPage = () => (
         </ul>
 
         Note: Most event hosts will be using {' '}
-        <Anchor href="https://zoom.us/">Zoom</Anchor>
+        <Anchor href="https://zoom.us/">Zoom</Anchor> {' '}
         to broadcast their classes, so we recommend setting up the program before 
         the class you’re taking is scheduled to begin. 
 

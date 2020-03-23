@@ -19,7 +19,7 @@ const FaqPage = () => (
           <Heading size="small">How Does It Work?</Heading>
           <Paragraph>
             Using {' '}
-            <Anchor href="https://zoom.us/">Zoom</Anchor>
+            <Anchor href="https://zoom.us/">Zoom</Anchor>{' '}
             or another video-broadcasting platform, instructors will be able to host live classes remotely to teach their skills. All
             of the classes will be listed and linked to on our event calendar, including the date, time, description, and preferred methods
             of payment. 
