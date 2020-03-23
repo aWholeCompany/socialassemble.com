@@ -5,65 +5,38 @@ import Layout from '../components/Layout'
 const InstructorPage = () => (
   <Layout>
     <Box pad="medium">
-      <Heading size="medium">Becoming An Instructor</Heading>
+      <Heading size="medium">Become an Instructor </Heading>
 
       <Box pad="small">
-        <Heading size="small">Requirements</Heading>
+        
         <Paragraph>
-          To teach a class you will need a computer or phone with a camera that
-          you can use for doing video chat
+          With so many out of work in the Asheville area and elsewhere due to the ongoing COVID-19 situation, 
+          we wanted to facilitate an opportunity for members of the community to create and broadcast virtual 
+          classes to help make up for lost income. Social Assemble is a distance-learning hub that brings 
+          instructors and prospective students together, no matter what the subject may be. From yoga to auto mechanics, 
+          if you have skills or knowledge that can be shared remotely, this is the place to do it.  
         </Paragraph>
+
+        <Heading size="small">Requirements</Heading>
+
         <Paragraph>
-          First: join our{' '}
-          <Anchor href="https://join.slack.com/t/socialassemble/shared_invite/zt-cvlxg4ie-yFt57NL00u4SqUtuAmp5dg">
-            Slack Team Here
-          </Anchor>
+          In order to become an instructor, you’ll first need a computer or phone with a camera capable of recording 
+          video. The next step is finding a platform to broadcast your class, and for ease of use, we recommend{' '}
+          <Anchor href="https://zoom.us/">Zoom</Anchor>
           .
         </Paragraph>
-        <Paragraph>
-          Then: create a room, or "channel" as they are called in Slack, to host
-          your class in.
-        </Paragraph>
-        <Paragraph>
-          This can be done by clicking the + next to the word "channels" on the
-          left side.
-        </Paragraph>
-        <Paragraph>This will be where you will host your classes.</Paragraph>
 
-        <Heading size="small">For Large Classes</Heading>
         <Paragraph>
-          For classes over 15 people in size, you will need to instead use{' '}
-          <Anchor href="https://www.zoom.us/">Zoom</Anchor>.
+          After you’ve signed up on Zoom or another platform of your choice, the rest is easy: 
         </Paragraph>
-        <Paragraph>This size limitation is imposed by Slack</Paragraph>
-      </Box>
 
-      <Box pad="small">
-        <Paragraph>
-          Then add the class you want to teach to our calendar.
-        </Paragraph>
-        <Paragraph>
-          Be sure to include ways people can pay you for the class and the name
-          of the Channel you created above in the description of the event, so
-          people know where to find you!
-        </Paragraph>
-      </Box>
+        <ul>
+          <li>Create an event on Zoom for the date and time that you plan to teach your class</li>
+          <li>Copy the invitation link for your event</li>
+          <li>Add your event to our calendar, including the invitation link and your preferred method of payment in the description</li>
+          <li>When the time comes, host your event!</li>
+        </ul>
 
-      <Box pad="small">
-        <Heading size="small">
-          Then when the time arrives for the class:
-        </Heading>
-        <Paragraph>
-          First: Sign into Slack and then enter the Channel you created above.
-        </Paragraph>
-        <Paragraph>
-          Next: Near the upper right, you wil see an icon that looks like a
-          phone.
-        </Paragraph>
-        <Paragraph>
-          Clicking this icon will start a video conference with everyone in the
-          room. Now simply teach your class!
-        </Paragraph>
       </Box>
     </Box>
   </Layout>
