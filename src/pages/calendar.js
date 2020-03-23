@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Box  } from 'grommet'
+import { Box } from 'grommet'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
 
@@ -11,14 +11,13 @@ height="600"
 frameBorder="0"
 scrolling="no"
 title="cal">
-</iframe>`;
+</iframe>`
 
 const Calendar = styled(Box)`
   position: relative;
-  padding-bottom: 75%;
   iframe {
-    width: 75vw;
-    height: 75vh;
+    width: 90vw;
+    height: 85vh;
   }
 `
 
@@ -26,7 +25,11 @@ class CalendarPage extends PureComponent {
   render() {
     return (
       <Layout>
-        <Calendar align="center" justify="center" dangerouslySetInnerHTML={{ __html: gcal }} />
+        <Calendar
+          align="center"
+          justify="center"
+          dangerouslySetInnerHTML={{ __html: gcal }}
+        />
       </Layout>
     )
   }
