@@ -19,6 +19,24 @@ const Calendar = styled(Box)`
     width: 90vw;
     height: 85vh;
   }
+
+  .responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+  }
+    
+  .responsive-iframe-container iframe,
+  .vresponsive-iframe-container object,
+  .vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `
 
 class CalendarPage extends PureComponent {
@@ -26,6 +44,7 @@ class CalendarPage extends PureComponent {
     return (
       <Layout>
         <Calendar
+          className="responsive-iframe-container "
           align="center"
           justify="center"
           dangerouslySetInnerHTML={{ __html: gcal }}
