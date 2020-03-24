@@ -1,4 +1,4 @@
-const appConfig = require('./appConfig')
+const Config = require('./Config')
 require('dotenv').config()
 
 module.exports = {
@@ -23,8 +23,8 @@ module.exports = {
         name: 'gatsby-starter-event-calendar',
         short_name: 'starter-calendar',
         start_url: '/',
-        background_color: appConfig.theme.background,
-        theme_color: appConfig.theme.brand,
+        background_color: Config.theme.background,
+        theme_color: Config.theme.brand,
         display: 'minimal-ui',
         icon: 'media/icon.svg',
       },

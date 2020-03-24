@@ -46,9 +46,9 @@ const Layout = ({ children }) => (
   <ConfigContext.Provider>
     <GlobalStyle />
     <ConfigContext.Consumer>
-      {appConfig => (
+      {Config => (
         <Grommet
-          theme={enhancedTheme(grommet, appConfig.theme)}
+          theme={enhancedTheme(grommet, Config.theme)}
           full
           css={css`
             scroll-behavior: smooth;

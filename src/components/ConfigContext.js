@@ -1,19 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import appConfig from '../../appConfig'
+import Config from '../../Config'
 
 const DEFAULT_CONFIG = {
   title: 'Gatsby Starter Event Calendar',
   subTitle: '',
   formLink: 'https://goo.gl/forms/u00WBxeK1kQco0uQ2',
-  maxAmountEvents: 2,
-  limitMonthInTheFuture: 2,
 }
 
 const { Provider, Consumer } = React.createContext(DEFAULT_CONFIG)
 
 const ConfigProvider = ({ children }) => (
-  <Provider value={appConfig}>{children}</Provider>
+  <Provider value={Config}>{children}</Provider>
 )
 
 ConfigProvider.propTypes = {
