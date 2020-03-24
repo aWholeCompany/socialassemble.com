@@ -1,5 +1,0 @@
-export const LANDING = '/'
-export const CALENDAR = '/calendar'
-export const INSTRUCTOR = '/instructor'
-export const STUDENT = '/student'
-export const FAQ = '/faq'

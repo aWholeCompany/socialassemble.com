@@ -5,7 +5,6 @@ import { Box, Heading, Button, Image, ResponsiveContext } from 'grommet'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import ConfigContext from './ConfigContext'
-import { CALENDAR } from '../constants/routes'
 
 const HeroButton = styled(Button)`
   padding: 15px;
@@ -13,7 +12,7 @@ const HeroButton = styled(Button)`
 
 const Hero = () => (
   <ConfigContext.Consumer>
-    {appConfig => (
+    {Config => (
       <ResponsiveContext.Consumer>
         {size => (
           <Box
@@ -48,27 +47,25 @@ const Hero = () => (
                 }}
               />
               <Heading size="large" a11yTitle="Application title">
-                {appConfig.title}
+                {Config.title}
               </Heading>
               <Heading a11yTitle="Application sub title">
-                {appConfig.subTitle}
+                {Config.subTitle}
               </Heading>
             </Box>
             <Box
               direction={size === 'small' ? 'column' : 'row'}
               margin={{ top: 'large' }}
               gap="medium"
-              // flex={true}
-              // fill="vertical"
             >
               <HeroButton
-                href={CALENDAR}
+                href={Config.routes.calendar}
                 label="Upcoming events"
                 a11yTitle="Upcoming events"
                 primary
               />
               <HeroButton
-                href={appConfig.formLink}
+                href={Config.routes.addToCal}
                 label="Add your event!"
                 a11yTitle="Click to add your event"
                 color="secondary"

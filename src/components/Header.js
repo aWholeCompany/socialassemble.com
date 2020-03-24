@@ -2,13 +2,7 @@ import React from 'react'
 import { Anchor, Box, Header, Menu, Text } from 'grommet'
 import { Calendar } from 'grommet-icons'
 import styled from 'styled-components'
-import {
-  LANDING,
-  CALENDAR,
-  INSTRUCTOR,
-  STUDENT,
-  FAQ,
-} from '../constants/routes'
+import ConfigContext from './ConfigContext'
 
 const BrandAnchor = styled(Anchor)`
   &:hover {
@@ -17,45 +11,52 @@ const BrandAnchor = styled(Anchor)`
   }
 `
 
-const menuItems = [
-  {
-    label: `Calendar`,
-    href: CALENDAR,
-  },
-  {
-    label: `Become an Instructor`,
-    href: INSTRUCTOR,
-  },
-  {
-    label: `Take a Class`,
-    href: STUDENT,
-  },
-  {
-    label: `FAQ`,
-    href: FAQ,
-  },
-]
-
 export default function() {
   return (
-    <Header size="large" pad="small" a11yTitle="SocialAssmble" fixed="true">
-      <Box direction="row">
-        <BrandAnchor hoverIndicator href={LANDING}>
-          <Calendar />
-        </BrandAnchor>
-        <Box>
-          <BrandAnchor href={LANDING}>
-            <Text margin="xsmall">Social Assemble</Text>
-          </BrandAnchor>
-        </Box>
-      </Box>
-      <Menu
-        dropProps={{
-          align: { top: 'bottom', left: 'left' },
-        }}
-        dropBackground={{ color: `black`, opacity: 'medium' }}
-        items={menuItems}
-      />
-    </Header>
+    <ConfigContext.Consumer>
+      {Config => (
+        <Header size="large" pad="small" a11yTitle="SocialAssmble" fixed="true">
+          <Box direction="row">
+            <BrandAnchor hoverIndicator href={Config.routes.landing}>
+              <Calendar />
+            </BrandAnchor>
+            <Box>
+              <BrandAnchor href={Config.routes.landing}>
+                <Text margin="xsmall">Social Assemble</Text>
+              </BrandAnchor>
+            </Box>
+          </Box>
+          <Menu
+            dropProps={{
+              align: { top: 'bottom', left: 'left' },
+            }}
+            dropBackground={{ color: `black`, opacity: 'medium' }}
+            items={[
+              {
+                label: `Calendar`,
+                href: Config.routes.calendar,
+              },
+              {
+                label: `Add Your Event`,
+                href: Config.routes.addToCal,
+                target: `_blank`
+              },
+              {
+                label: `Become an Instructor`,
+                href: Config.routes.instructor,
+              },
+              {
+                label: `Take a Class`,
+                href: Config.routes.student,
+              },
+              {
+                label: `FAQ`,
+                href: Config.routes.faq,
+              },
+            ]}
+          />
+        </Header>
+      )}
+    </ConfigContext.Consumer>
   )
 }
